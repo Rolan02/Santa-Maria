@@ -1,0 +1,16 @@
+/home/roland/Proyectos/Net/Maria Micaela/bin/Debug/net5.0/Maria Micaela
+/home/roland/Proyectos/Net/Maria Micaela/bin/Debug/net5.0/Maria Micaela.deps.json
+/home/roland/Proyectos/Net/Maria Micaela/bin/Debug/net5.0/Maria Micaela.runtimeconfig.json
+/home/roland/Proyectos/Net/Maria Micaela/bin/Debug/net5.0/Maria Micaela.runtimeconfig.dev.json
+/home/roland/Proyectos/Net/Maria Micaela/bin/Debug/net5.0/Maria Micaela.dll
+/home/roland/Proyectos/Net/Maria Micaela/bin/Debug/net5.0/ref/Maria Micaela.dll
+/home/roland/Proyectos/Net/Maria Micaela/bin/Debug/net5.0/Maria Micaela.pdb
+/home/roland/Proyectos/Net/Maria Micaela/obj/Debug/net5.0/Maria Micaela.csproj.AssemblyReference.cache
+/home/roland/Proyectos/Net/Maria Micaela/obj/Debug/net5.0/Maria Micaela.GeneratedMSBuildEditorConfig.editorconfig
+/home/roland/Proyectos/Net/Maria Micaela/obj/Debug/net5.0/Maria Micaela.AssemblyInfoInputs.cache
+/home/roland/Proyectos/Net/Maria Micaela/obj/Debug/net5.0/Maria Micaela.AssemblyInfo.cs
+/home/roland/Proyectos/Net/Maria Micaela/obj/Debug/net5.0/Maria Micaela.csproj.CoreCompileInputs.cache
+/home/roland/Proyectos/Net/Maria Micaela/obj/Debug/net5.0/Maria Micaela.dll
+/home/roland/Proyectos/Net/Maria Micaela/obj/Debug/net5.0/ref/Maria Micaela.dll
+/home/roland/Proyectos/Net/Maria Micaela/obj/Debug/net5.0/Maria Micaela.pdb
+/home/roland/Proyectos/Net/Maria Micaela/obj/Debug/net5.0/Maria Micaela.genruntimeconfig.cache
