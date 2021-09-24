@@ -11,24 +11,44 @@ namespace Maria_Micaela
             escuela.Pais = "Bolivia";
             escuela.Ciudad = "Cochabamba";
 
-            var curso1 = new Curso(){
-                Nombre = "101"
-            };
-            var curso2 = new Curso(){
-                Nombre = "201"
-            };
-            var curso3 = new Curso(){
-                Nombre = "301"
+            Curso[] arreglosCursos = {
+                new Curso(){Nombre = "101" },
+                new Curso(){Nombre = "201" },
+                new Curso(){Nombre = "301" },
             };
 
             Console.WriteLine(escuela);
             Console.WriteLine(new string('=', 50));
-            Console.WriteLine(curso1.Nombre + "," + curso1.Id);
-            Console.WriteLine(curso2.Nombre + "," + curso2.Id);
-            Console.WriteLine($"{curso3.Nombre} , {curso3.Id}");
-
-            
+ 
+            ImprimirCursosConWhile(arreglosCursos);
+            ImprimirCursosConFor(arreglosCursos);
+            ImprimirCursosConForEach(arreglosCursos);
         }
+
+        private static void ImprimirCursosConWhile(Curso[] arreglosCursos)
+        {
+            int contador = 0;
+            while(contador < arreglosCursos.Length)
+            {
+                Console.WriteLine($"Nombre {arreglosCursos[contador].Nombre},Id {arreglosCursos[contador].Id}");
+                contador++;
+            }
+        }
+        private static void ImprimirCursosConFor(Curso[] arreglosCursos)
+        {
+            for (int i = 0; i < arreglosCursos.Length; i++)
+            {
+                Console.WriteLine($"Nombre {arreglosCursos[i].Nombre},Id {arreglosCursos[i].Id}");
+            }
+        }
+        private static void ImprimirCursosConForEach(Curso[] arreglosCursos)
+        {
+            foreach (var curso in arreglosCursos)
+            {
+                Console.WriteLine($"Nombre {curso.Nombre},Id {curso.Id}");
+            }
+        }
+
 
         
     }

@@ -9,7 +9,9 @@ namespace Maria_Micaela.Entidades
         public string Pais { get; set; }
         public string Ciudad { get; set; }
         public TiposEscuela TiposEscuela{get; set;}
-        
+        public Curso[] Cursos{get; set;}
+
+
 
 
         // ------------igualacion por tuplas --------
