@@ -1,4 +1,5 @@
 ﻿using System;
+using Maria_Micaela.Entidades;
 
 namespace Maria_Micaela
 {
@@ -6,7 +7,9 @@ namespace Maria_Micaela
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var escuela = new Escuela("U.E. Santa Maria ",1994);
+            
+            Console.WriteLine("La mejor escuela es la " + escuela.Nombre + "fundado en el ano " + escuela.Fundacion);
         }
     }
 }
