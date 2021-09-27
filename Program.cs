@@ -11,7 +11,7 @@ namespace Maria_Micaela
             escuela.Pais = "Bolivia";
             escuela.Ciudad = "Cochabamba";
 
-            Curso[] arreglosCursos = {
+            escuela.Cursos = new Curso[] {
                 new Curso(){Nombre = "101" },
                 new Curso(){Nombre = "201" },
                 new Curso(){Nombre = "301" },
@@ -19,10 +19,28 @@ namespace Maria_Micaela
 
             Console.WriteLine(escuela);
             Console.WriteLine(new string('=', 50));
+            ImprimirCursosEscuela(escuela);
  
-            ImprimirCursosConWhile(arreglosCursos);
-            ImprimirCursosConFor(arreglosCursos);
-            ImprimirCursosConForEach(arreglosCursos);
+           // ImprimirCursosConWhile(arreglosCursos);
+            //ImprimirCursosConFor(arreglosCursos);
+           // ImprimirCursosConForEach(arreglosCursos);
+        }
+
+        private static void ImprimirCursosEscuela(Escuela escuela)
+        {
+            Console.WriteLine(new string('=', 50));
+            Console.WriteLine("Cursos de la escuela !");
+            Console.WriteLine(new string('=', 50));
+
+            
+            if (escuela?.Cursos != null )
+            {
+                foreach (var curso in escuela.Cursos)
+                {
+               Console.WriteLine($"Nombre {curso.Nombre},Id {curso.Id}");
+                }
+            }
+
         }
 
         private static void ImprimirCursosConWhile(Curso[] arreglosCursos)
@@ -48,8 +66,5 @@ namespace Maria_Micaela
                 Console.WriteLine($"Nombre {curso.Nombre},Id {curso.Id}");
             }
         }
-
-
-        
     }
 }
