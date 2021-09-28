@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Maria_Micaela.Entidades;
 
 namespace Maria_Micaela
@@ -11,19 +12,36 @@ namespace Maria_Micaela
             escuela.Pais = "Bolivia";
             escuela.Ciudad = "Cochabamba";
 
-            escuela.Cursos = new Curso[] {
-                new Curso(){Nombre = "101" },
-                new Curso(){Nombre = "201" },
-                new Curso(){Nombre = "301" },
+
+            escuela.Cursos = new List<Curso>() {
+                new Curso(){Nombre = "101" , Jornada = TiposJornada.Manana },
+                new Curso(){Nombre = "201" , Jornada = TiposJornada.Manana},
+                new Curso(){Nombre = "301" , Jornada = TiposJornada.Manana }
             };
+            escuela.Cursos.Add(new Curso(){Nombre = "102" , Jornada = TiposJornada.Tarde });
+            escuela.Cursos.Add(new Curso(){Nombre = "202" , Jornada = TiposJornada.Tarde });
+            escuela.Cursos.Add(new Curso(){Nombre = "302" , Jornada = TiposJornada.Tarde });
+            
+            var importarCursos = new List<Curso>() {
+                new Curso(){Nombre = "401" , Jornada = TiposJornada.Manana },
+                new Curso(){Nombre = "501" , Jornada = TiposJornada.Manana},
+                new Curso(){Nombre = "601" , Jornada = TiposJornada.Manana }
+            };
+            
+            escuela.Cursos.AddRange(importarCursos);
+            Predicate<Curso> predicate = Predicate;
+            escuela.Cursos.RemoveAll(predicate);
+
 
             Console.WriteLine(escuela);
             Console.WriteLine(new string('=', 50));
             ImprimirCursosEscuela(escuela);
- 
-           // ImprimirCursosConWhile(arreglosCursos);
-            //ImprimirCursosConFor(arreglosCursos);
-           // ImprimirCursosConForEach(arreglosCursos);
+           
+        }
+
+        private static bool Predicate(Curso obj)
+        {
+            return obj.Nombre == "301";
         }
 
         private static void ImprimirCursosEscuela(Escuela escuela)
@@ -32,7 +50,7 @@ namespace Maria_Micaela
             Console.WriteLine("Cursos de la escuela !");
             Console.WriteLine(new string('=', 50));
 
-            
+            // ? no va a verificar cursos salvo que la escuela sea diferente de null 
             if (escuela?.Cursos != null )
             {
                 foreach (var curso in escuela.Cursos)
