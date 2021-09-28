@@ -29,8 +29,17 @@ namespace Maria_Micaela
             };
             
             escuela.Cursos.AddRange(importarCursos);
-            Predicate<Curso> predicate = Predicate;
-            escuela.Cursos.RemoveAll(predicate);
+            
+            //Metodo para borrar un elemento usando Predicate
+            escuela.Cursos.RemoveAll(Predicate);
+            
+            //Metodo para borrar un elemento usando delegados
+            escuela.Cursos.RemoveAll(delegate (Curso cur){
+                return cur.Nombre == "401";
+            });
+            
+            //Metodo para borrar un elemento usando lambdas
+            escuela.Cursos.RemoveAll(cur => cur.Nombre == "501");
 
 
             Console.WriteLine(escuela);
