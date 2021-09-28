@@ -3,7 +3,7 @@ using System.Collections.Generic;
 namespace Maria_Micaela.Entidades
 
 {
-    class Escuela 
+    public class Escuela 
     {
 
         public string Nombre { get; set; }
